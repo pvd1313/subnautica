@@ -30,7 +30,7 @@ public class Main: BaseUnityPlugin
         ActivationKeyEntry = Config.Bind("Defabricator", "Activator", KeyCode.C, "The key to press in order to activate the Defabrication menu.");
     }
 
-    public void Awake()
+    private void Awake()
     {
         Logging.Initialize(Logger);
         Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID);

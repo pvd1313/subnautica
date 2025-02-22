@@ -16,7 +16,7 @@ using Common;
 #endif
 public class Main: BaseUnityPlugin
 {
-    public void Awake()
+    private void Awake()
     {
         Logging.Initialize(Logger);
         try
