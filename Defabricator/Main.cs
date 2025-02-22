@@ -14,6 +14,11 @@ using System.Collections;
 [BepInIncompatibility("com.ahk1221.smlhelper")]
 [BepInDependency("com.mrpurple6411.CustomCraft3", BepInDependency.DependencyFlags.SoftDependency)]
 [BepInDependency("com.mrpurple6411.AIOFabricator", BepInDependency.DependencyFlags.SoftDependency)]
+#if SUBNAUTICA
+[BepInProcess("Subnautica.exe")]
+#elif BELOWZERO
+[BepInProcess("SubnauticaZero.exe")]
+#endif
 public class Main: BaseUnityPlugin
 {
     private KeyCode ActivationKey => ActivationKeyEntry.Value;
